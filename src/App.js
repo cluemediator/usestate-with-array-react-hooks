@@ -6,8 +6,8 @@ function App() {
 
   // handle click event of the button to add item
   const addMoreItem = () => {
-    setItems([...items, {
-      id: items.length,
+    setItems(prevItems => [...prevItems, {
+      id: prevItems.length,
       value: getRandomNumber()
     }]);
   }
